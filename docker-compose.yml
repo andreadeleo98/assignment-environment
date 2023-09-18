@@ -18,6 +18,13 @@ services:
     restart: always
     ports:
       - 8080:8080
+    environment:
+      - MONGODB_HOST=mongodb
+      - MONGODB_PORT=27017
+      - MONGODB_DATABASE=mydb
+      - MONGODB_USERNAME=root
+      - MONGODB_PASSWORD=example
+      - MONGODB_AUTHENTICATION_DATABASE=admin
   
   frontend:
     image: assignment-frontend
